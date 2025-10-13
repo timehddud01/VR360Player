@@ -7,7 +7,7 @@ using UnityEngine.Video;//비디오플레이어 기능을 사용하기 위한 �
 public class VideoFrame : MonoBehaviour
 {
     //VideoPlayer컴포넌트
-        VideoPlayer vp;
+    VideoPlayer vp;
         
     // Start is called before the first frame update
     void Start()
@@ -39,5 +39,21 @@ public class VideoFrame : MonoBehaviour
             vp.Stop();
         }
         
+    }
+
+    public void CheckVideoFrame(bool Checker)
+    {
+        if(Checker)
+        {
+            if(!vp.isPlaying)
+            {
+                vp.Play();
+            }
+
+        }
+        else
+        {
+            vp.Stop();
+        }
     }
 }
