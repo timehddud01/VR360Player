@@ -25,7 +25,7 @@ public class Video360Play : MonoBehaviour
             // if(curVCidx>=vcList.Length){
             //     curVCidx = curVCidx + vcList.Length;
             // }
-
+            //위 if문을 대체할 수 있는 % 활용 코드
             curVCidx = (curVCidx -1+vcList.Length)%vcList.Length;
             
             
