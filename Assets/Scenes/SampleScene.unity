@@ -227,6 +227,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4856287445163038225, guid: 004bc44822c1ef0409a57a2f34bc8f31, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267099453561466822, guid: 004bc44822c1ef0409a57a2f34bc8f31, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -468,6 +476,8 @@ MonoBehaviour:
   uiCanvas: {fileID: 1932518896}
   gazeImg: {fileID: 306624097}
   uiScaleVal: 3
+  gazeChargeTime: 3
+  vp360: {fileID: 1433434}
 --- !u!1 &1308483013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 858298641255492971, guid: 1bc0b3fb1211a944e8d489d38e701540, type: 3}

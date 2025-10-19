@@ -12,8 +12,10 @@ public class VideoFrame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        //현재 오브젝트의 비디오 플레이어 컴포넌트 정보를 가지고 온다.
         vp = GetComponent<VideoPlayer>();
-        //영상 재생을 멈춤
+        //영상 재생을 멈춤(자동재생되지 않도록 멈춤)
         vp.Stop();//Video Frame안에 있는 video
     }
 
@@ -41,7 +43,7 @@ public class VideoFrame : MonoBehaviour
         
     }
 
-    public void CheckVideoFrame(bool Checker)
+    public void CheckVideoFrame(bool Checker) //GazePointerCtrl에서 호출하는 함수
     {
         if(Checker)
         {
