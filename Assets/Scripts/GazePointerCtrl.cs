@@ -17,7 +17,7 @@ public class GazePointerCtrl : MonoBehaviour
     bool isHitObj; //인터랙션이 일어나는 오브젝트에 시선이 닿으면 true, 닿지 않으면 flase
     GameObject prevHitObj; //이전 프레임의 시선이 ㅓ물렀던 오브젝트 정보를 담기 위한 변수
     GameObject curHitObj; //현재 프레임의 시선이 머물렀던 오ㅡ젝트 저오를 담기 위한 변수
-    float curGazeTime =0 ; //시선이 머무르는 시간을 저장하기 위한 변수
+    float curGazeTime = 0 ; //시선이 머무르는 시간을 저장하기 위한 변수
     public float gazeChargeTime = 3f; //게이지가 차는 시간을 체크하기 위한 기준 시간 3초(필요에 따라 수정)
 
 
@@ -129,7 +129,7 @@ public class GazePointerCtrl : MonoBehaviour
             // {
             //     vp360.SwapVideoClip(true);
             // }
-            // else if (hitObj.name.Contains("Left"))
+            // else if (hitObj.name.Contains("Left")) //이름에 포함하는지 -->name.contains
             // {
             //     vp360.SwapVideoClip(false);
             // }

@@ -32,8 +32,8 @@ public class Video360Play : MonoBehaviour
             //위 if문을 대체할 수 있는 % 활용 코드
             curVCidx = (curVCidx - 1 + vcList.Length) % vcList.Length;
 
-
-            vp.clip = vcList[curVCidx];
+            SetVideoPlay(curVCidx);
+            // vp.clip = vcList[curVCidx]; //실행 코드는 한 함수로 통일, 메모리 누수
             //vp.Play();
 
 
@@ -46,7 +46,9 @@ public class Video360Play : MonoBehaviour
                 curVCidx = curVCidx - vcList.Length;
             }
 
-            vp.clip = vcList[curVCidx];
+
+            SetVideoPlay(curVCidx);
+            // vp.clip = vcList[curVCidx]; //실행 코드는 한 함수로 통일, 메모리 누수
             //vp.Play();
         }
 
@@ -54,12 +56,13 @@ public class Video360Play : MonoBehaviour
 
     }
     public void SetVideoPlay(int num) //GazePointerCtrl에서 호출하는 함수
-    {
+    {   
+        num = num % vcList.Length; //안전벨트. 범위 안에 들어있는 비디오만 볼 수 있게
         //현재 재생중인 번호가 전달받은 번호와 다를때만 실행
         if (curVCidx != num)
         {
-            vp.Stop();
-            vp.clip = vcList[num];
+            vp.Stop(); //멈추고
+            vp.clip = vcList[num]; //새로운 클립으로 교체
             curVCidx = num;
             vp.Play();
         }
